@@ -21,12 +21,17 @@ get '/party' do
 end
 
 
-post '/git/:data', :provides => :json do
+# post '/git/:data', :provides => :json do
 	
 
-	jdata = params[:data]
-	for_json = JSON.parse(jdata)
-	Pusher['test_channel'].trigger('notification', for_json)
+# 	jdata = params[:data]
+# 	for_json = JSON.parse(jdata)
+# 	Pusher['test_channel'].trigger('notification', for_json)
+# end
+
+post '/git', :provides => :json do
+	push = JSON.parse(params[:payload])
+  	Pusher['test_channel'].trigger('notification', push)
 end
 
 
