@@ -22,7 +22,7 @@ end
 
 
 post '/git/:data', :provides => :json do
-	pass unless request.accept? 'application/json'
+	
 
 	jdata = params[:data]
 	for_json = JSON.parse(jdata)
@@ -35,7 +35,7 @@ get '/ping/:id' do
 
 	id = params[:id]
 
-	data = {'message' => 'Update recieved!', 'id' => id}
+	data = {'message' => 'Update recieved!', 'id' => id, 'text' => 'text here'}
 	Pusher['test_channel'].trigger('notification', data)
 end
 
