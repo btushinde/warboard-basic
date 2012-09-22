@@ -1,8 +1,8 @@
 # warboard.rb
-
 require 'sinatra'
 require 'pusher'
 require 'json'
+
 
 get '/' do
 	erb :index, :layout => :index
