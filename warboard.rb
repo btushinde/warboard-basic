@@ -23,6 +23,9 @@ end
 
 post '/git', :provides => :json do
 	pass unless request.accept? 'application/json'
+	
+	content_type :json
+  	{"params" => params}.to_json
 
 	data = {'message' => 'Update recieved!', 'id' => '1'}
 	Pusher['test_channel'].trigger('notification', data)
