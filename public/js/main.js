@@ -28,9 +28,14 @@ var pusher = new Pusher('1d429354391310d97281');
 var channel = pusher.subscribe('test_channel');
 
 channel.bind('notification', function(data) {
-  console.log(data.id);
 
-  toggleBlock($('.block:eq('+data.id+')').parent());
+  // $.getJSON(data.message, function(data){
+  //      console.log(data);
+  // });
+
+console.log(data);
+
+  //toggleBlock($('.block:eq('+data.id+')').parent());
 
 
 });
@@ -40,6 +45,8 @@ channel.bind('notification', function(data) {
 
 
 });
+
+
 
 
 function toggleBlock(block){

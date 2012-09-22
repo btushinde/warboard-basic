@@ -21,14 +21,12 @@ get '/party' do
 end
 
 
-post '/git', :provides => :json do
+post '/git/:data', :provides => :json do
 	pass unless request.accept? 'application/json'
-	
-	content_type :json
-  	{"params" => params}.to_json
 
-	data = {'message' => 'Update recieved!', 'id' => '1'}
-	Pusher['test_channel'].trigger('notification', data)
+	jdata = params[:data]
+	for_json = JSON.parse(jdata)
+	Pusher['test_channel'].trigger('notification', for_json)
 end
 
 
