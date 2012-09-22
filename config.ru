@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'pusher'
 require 'json'
+require 'haml'
 require './warboard'
 
 set :run, false
