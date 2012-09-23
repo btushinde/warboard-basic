@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,57 +24,57 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, /Users/biko/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 2, /Users/biko/Projects/web/smashing/warboard-basic/sass/neat/grid/_grid.scss */
+/* line 2, ../sass/neat/grid/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 1, /Users/biko/Projects/web/smashing/warboard-basic/sass/_type.scss */
+/* line 1, ../sass/_type.scss */
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: normal;
@@ -82,72 +82,87 @@ body {
   line-height: 1.25;
 }
 
-/* line 8, /Users/biko/Projects/web/smashing/warboard-basic/sass/_type.scss */
+/* line 8, ../sass/_type.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 12, /Users/biko/Projects/web/smashing/warboard-basic/sass/_type.scss */
+/* line 12, ../sass/_type.scss */
 h1, h2, h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
 }
 
-/* line 17, /Users/biko/Projects/web/smashing/warboard-basic/sass/_type.scss */
+/* line 17, ../sass/_type.scss */
 h1 {
   font-size: 4em;
 }
 
-/* line 21, /Users/biko/Projects/web/smashing/warboard-basic/sass/_type.scss */
+/* line 21, ../sass/_type.scss */
 h2 {
   font-size: 2em;
 }
 
-/* line 24, /Users/biko/Projects/web/smashing/warboard-basic/sass/_type.scss */
+/* line 24, ../sass/_type.scss */
 h3 {
   font-size: 1em;
 }
 
-/* line 28, /Users/biko/Projects/web/smashing/warboard-basic/sass/_type.scss */
+/* line 28, ../sass/_type.scss */
 .green {
   color: greens;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 body {
   zoom: 1;
   max-width: 75.99879em;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -ms-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -ms-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
-/* line 18, /Users/biko/Projects/web/smashing/warboard-basic/sass/bourbon/addons/_clearfix.scss */
+/* line 18, ../sass/bourbon/addons/_clearfix.scss */
 body:before, body:after {
   content: "";
   display: table;
 }
-/* line 23, /Users/biko/Projects/web/smashing/warboard-basic/sass/bourbon/addons/_clearfix.scss */
+/* line 23, ../sass/bourbon/addons/_clearfix.scss */
 body:after {
   clear: both;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 21, ../sass/screen.scss */
 a, a:visited, a:active {
   color: black;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .main-container {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 100%;
 }
-/* line 55, /Users/biko/Projects/web/smashing/warboard-basic/sass/neat/grid/_grid.scss */
+/* line 55, ../sass/neat/grid/_grid.scss */
 .main-container:last-child {
   margin-right: 0;
 }
-/* line 25, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 .main-container header {
   display: block;
   float: left;
@@ -157,42 +172,42 @@ a, a:visited, a:active {
   padding: 10px;
   margin-bottom: 20px;
 }
-/* line 55, /Users/biko/Projects/web/smashing/warboard-basic/sass/neat/grid/_grid.scss */
+/* line 55, ../sass/neat/grid/_grid.scss */
 .main-container header:last-child {
   margin-right: 0;
 }
-/* line 31, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .main-container header h2 {
   font-weight: 100;
 }
-/* line 35, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .main-container header nav {
   display: block;
   margin-top: 20px;
 }
-/* line 39, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .main-container header nav a {
   text-decoration: none;
 }
-/* line 42, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .main-container header nav li {
   float: left;
   margin-right: 20px;
   padding: 10px 20px;
   background: grey;
 }
-/* line 51, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .main-container .main {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 100%;
 }
-/* line 55, /Users/biko/Projects/web/smashing/warboard-basic/sass/neat/grid/_grid.scss */
+/* line 55, ../sass/neat/grid/_grid.scss */
 .main-container .main:last-child {
   margin-right: 0;
 }
-/* line 55, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .main-container footer {
   display: block;
   float: left;
@@ -201,12 +216,12 @@ a, a:visited, a:active {
   display: block;
   text-align: center;
 }
-/* line 55, /Users/biko/Projects/web/smashing/warboard-basic/sass/neat/grid/_grid.scss */
+/* line 55, ../sass/neat/grid/_grid.scss */
 .main-container footer:last-child {
   margin-right: 0;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .blocks li {
   position: absolute;
   background: lightgrey;
@@ -227,34 +242,34 @@ a, a:visited, a:active {
   -o-user-select: none;
   user-select: none;
 }
-/* line 82, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .blocks li article {
   position: absolute;
   width: 100%;
 }
-/* line 86, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .blocks li article header {
   position: relative;
   float: left;
 }
-/* line 90, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .blocks li article header h2 {
   font-size: 1.4em;
   font-weight: 300;
   font-style: italic;
 }
-/* line 100, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .blocks li .info {
   padding: 10px;
   position: relative;
   float: left;
   clear: both;
 }
-/* line 106, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .blocks li .info li {
   background: none;
 }
-/* line 111, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .blocks li .options {
   background: rgba(0, 0, 0, 0.8);
   height: 100px;
@@ -262,14 +277,14 @@ a, a:visited, a:active {
   margin-top: 40px;
   display: none;
 }
-/* line 119, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .blocks li #graph {
   width: 500px;
   height: 600px;
   margin-left: -30px;
   margin-top: -40px;
 }
-/* line 127, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .blocks li .corner {
   position: absolute;
   z-index: 20;
@@ -290,31 +305,31 @@ a, a:visited, a:active {
   /* CSS3 (for when it gets supported) */
   cursor: default;
 }
-/* line 145, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .blocks li .corner:hover {
   background: black;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 153, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .blocks li:hover {
   background: pink;
 }
-/* line 159, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .blocks li.expanded {
   width: 600px;
   height: 420px;
   background: pink;
 }
-/* line 165, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .blocks li.expanded .corner {
   padding: 8px;
   font-weight: bold;
   font-size: 2em;
   top: 0;
 }
-/* line 173, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .blocks li.expanded article h2 {
   position: relative;
   float: left;

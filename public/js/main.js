@@ -1,51 +1,35 @@
-
-
-
 $(function() {
 	$blocks = $('.blocks').isotope({
 		animationOptions: {
-		duration: 750,
-		easing: 'linear',
+		duration: 250,
+		easing: 'easeOutExpo',
 		queue: false
-	},
-	animationEngine : 'jquery'
-});
+		},
+		animationEngine : 'jquery'
+	});
 
 
-$('.blocks').find('li .corner').click(function(){
-	toggleBlock($(this).parent().parent());
-});
+	$('.blocks').find('li .corner').click(function(){
+		toggleBlock($(this).parent().parent());
+	});
 
 
-// Pusher.log = function(message) {
-//   if (window.console && window.console.log) window.console.log(message);
-// };
+	Pusher.log = function(message) {
+		if (window.console && window.console.log) window.console.log(message);
+	};
 
-//Flash fallback logging - don't include this in production
-WEB_SOCKET_DEBUG = true;
+	//Flash fallback logging - don't include this in production
+	WEB_SOCKET_DEBUG = true;
 
-var pusher = new Pusher('1d429354391310d97281');
-var channel = pusher.subscribe('test_channel');
+	var pusher = new Pusher('1d429354391310d97281');
+	var channel = pusher.subscribe('test_channel');
 
-channel.bind('notification', function(data) {
-
-  // $.getJSON(data.message, function(data){
-  //      console.log(data);
-  // });
-
-console.log(data);
-
-  //toggleBlock($('.block:eq('+data.id+')').parent());
-
+	channel.bind('notification', function(data) {
+		console.log(data.repository.name);
+		toggleBlock($('.'+data.repository.name).parent());
+	});
 
 });
-
-
-
-
-
-});
-
 
 
 
@@ -54,4 +38,77 @@ function toggleBlock(block){
 	$o.toggleClass('expanded');
 	$blocks.isotope('reLayout');
 	$('#graph').toggle();
+}
+
+
+function sendPayload(){
+	var options = {
+		host: 'localhost',
+		port: 9393,
+		path: '/payload',
+		method: 'POST'
+	};
+
+
+	// GitHub sample payload
+		var payload = {"payload": {
+			"before": "5aef35982fb2d34e9d9d4502f6ede1072793222d",
+			"repository": {
+				"url": "http://github.com/defunkt/github",
+				"name": "github",
+				"description": "You're lookin' at it.",
+				"watchers": 5,
+				"forks": 2,
+				"private": 1,
+				"owner": {
+					"email": "chris@ozmm.org",
+					"name": "defunkt"
+				}
+			},
+			"commits": [
+				{
+				"id": "41a212ee83ca127e3c8cf465891ab7216a705f59",
+				"url": "http://github.com/defunkt/github/commit/41a212ee83ca127e3c8cf465891ab7216a705f59",
+				"author": {
+					"email": "chris@ozmm.org",
+					"name": "Chris Wanstrath"
+				},
+				"message": "okay i give in",
+				"timestamp": "2008-02-15T14:57:17-08:00",
+				"added": ["filepath.rb"]
+				},
+				{
+				"id": "de8251ff97ee194a289832576287d6f8ad74e3d0",
+				"url": "http://github.com/defunkt/github/commit/de8251ff97ee194a289832576287d6f8ad74e3d0",
+				"author": {
+					"email": "chris@ozmm.org",
+					"name": "Chris Wanstrath"
+				},
+				"message": "update pricing a tad",
+				"timestamp": "2008-02-15T14:36:34-08:00"
+				}
+			],
+			"after": "de8251ff97ee194a289832576287d6f8ad74e3d0",
+			"ref": "refs/heads/master"
+		}};
+
+	var frm = $(document.createElement('form'));
+	var dat = JSON.stringify(payload);
+
+	console.log(payload);
+
+	var pusher = new Pusher('1d429354391310d97281');
+	var channel = pusher.subscribe('test-channel');
+	channel.bind('pusher:subscription_succeeded', function() {
+		var triggered = channel.trigger('notification', payload);
+	});
+
+	// $.post(
+	// 	'http://' + options.host + ':' + options.port + options.path,
+	// 	frm.attr("action"),
+	// 	dat,
+	// 	function(data) {
+	// 		alert("Response: " + data);
+	// 	}
+ //    );
 }
