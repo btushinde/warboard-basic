@@ -11,28 +11,6 @@ Pusher.key = '1d429354391310d97281'
 Pusher.secret = '7679f66095f826841f45'
 
 
-
-
-
-class Partay
-  include HTTParty
-  base_uri 'http://localhost:9292/git'
-end
-
-options = {
-  :body => {
-    :pear => { # your resource
-      :foo => '123', # your columns/data
-      :bar => 'second',
-      :baz => 'last thing'
-    }
-  }
-}
-
-
-
-
-
 get '/' do
 
 	github = Github.new 

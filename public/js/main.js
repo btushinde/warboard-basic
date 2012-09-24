@@ -41,7 +41,7 @@ function toggleBlock(block){
 }
 
 
-function sendPayload(){
+function sendPayload(repoName){
 	var options = {
 		host: 'localhost',
 		port: 9393,
@@ -55,7 +55,7 @@ function sendPayload(){
 			"before": "5aef35982fb2d34e9d9d4502f6ede1072793222d",
 			"repository": {
 				"url": "http://github.com/defunkt/github",
-				"name": "github",
+				"name": repoName,
 				"description": "You're lookin' at it.",
 				"watchers": 5,
 				"forks": 2,
