@@ -27,6 +27,7 @@ $(function() {
 	channel.bind('notification', function(data) {
 		console.log(data.repository.name);
 		toggleBlock($('.'+data.repository.name).parent());
+		
 	});
 
 });
@@ -37,7 +38,8 @@ function toggleBlock(block){
 	$o = block;
 	$o.toggleClass('expanded');
 	$blocks.isotope('reLayout');
-	$('#graph').toggle();
+	//$('#graph').toggle();
+	setTimeout(toggleBlock(block), 2000);
 }
 
 
