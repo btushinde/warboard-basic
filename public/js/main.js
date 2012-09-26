@@ -39,7 +39,6 @@ function toggleBlock(block){
 	$o.toggleClass('expanded');
 	$blocks.isotope('reLayout');
 	//$('#graph').toggle();
-	setTimeout(toggleBlock(block), 2000);
 }
 
 
