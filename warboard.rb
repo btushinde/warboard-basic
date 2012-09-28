@@ -21,12 +21,12 @@ end
 
 post '/git', :provides => :json do
 	push = JSON.parse(params[:payload])
-  Pusher['test_channel'].trigger('notification', push)
+  Pusher['test_channel'].trigger('event1', push)
 end
 
 post '/payload' do
   push = JSON.parse(request.body.read)
-  Pusher['test_channel'].trigger('notification', push)
+  Pusher['test_channel'].trigger('event1', push)
 end
 
 

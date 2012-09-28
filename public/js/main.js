@@ -5,7 +5,8 @@ $(function() {
 		easing: 'easeOutExpo',
 		queue: false
 		},
-		animationEngine : 'jquery'
+		animationEngine : 'jquery',
+		masonry: {columnWidth: 75}
 	});
 
 
@@ -27,6 +28,7 @@ $(function() {
 	channel.bind('notification', function(data) {
 		console.log(data.repository.name);
 		toggleBlock($('.'+data.repository.name).parent());
+		setTimeout(function(){toggleBlock($('.'+data.repository.name).parent());},500);
 		
 	});
 
@@ -42,10 +44,10 @@ function toggleBlock(block){
 }
 
 
-function sendPayload(repoName){
+function sendPayload(testPort, repoName){
 	var options = {
 		host: 'localhost',
-		port: 9393,
+		port: testPort,
 		path: '/payload',
 		method: 'POST'
 	};
@@ -101,7 +103,7 @@ function sendPayload(repoName){
 	var pusher = new Pusher('1d429354391310d97281');
 	var channel = pusher.subscribe('test-channel');
 	channel.bind('pusher:subscription_succeeded', function() {
-		var triggered = channel.trigger('notification', payload);
+		var triggered = channel.trigger('event1', payload);
 	});
 
 	// $.post(
